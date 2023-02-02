@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Division;
+use App\Models\Employee;
 use App\Models\Upazila;
 
-class District extends Model
+class Area extends Model
 {
     use HasFactory;
     protected $guarded = [];
 
-    public function division(){
-        return $this->belongsTo(Division::class);
+    public function employee(){
+        return $this->hasMany(Employee::class);
     }
 
     public function upazila(){
-        return $this->hasMany(Upazila::class);
+        return $this->belongsTo(Upazila::class);
     }
+
 }
