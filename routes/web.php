@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/employees',[EmployeeController::class,'index']);
+Route::get('/ckHasoneThrow',[EmployeeController::class,'ckHasoneThrow']);
+Route::get('/divishionWithUpujela',[EmployeeController::class,'divishionWithUpujela']);
